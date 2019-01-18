@@ -224,24 +224,6 @@ namespace GraficadorSeñales
 
         private void btnRealizarOperacion_Click(object sender, RoutedEventArgs e)
         {
-            señalResultado = null;
-            switch (cbTipoOperacion.SelectedIndex)
-            {
-                case 0: //Suma
-                    señalResultado = Señal.sumar(señal, segundaSeñal);
-                    break;
-
-                case 1: //Multiplicacion
-                    señalResultado = Señal.multiplicar(señal, segundaSeñal);
-                    break;
-
-                case 2: //Convolcion
-                    señalResultado = Señal.convolucionar(señal, segundaSeñal);
-                    break;
-
-                default:
-                    break;
-            }
 
             señalResultado.actualizarAmplitudMaxima();
 
@@ -262,6 +244,24 @@ namespace GraficadorSeñales
 
                 }
 
+            }
+
+            double valorMaximo = 0;
+            int indiceMaximo = 0;
+            int indiceActual = 0;
+
+            foreach(Muestra muestra in transformada.Muesreas)
+            {
+                if muestra.Y > valorMaximo)
+                {
+                    valorMaximo = muestra.Y;
+                    indiceMaximo = indiceActual;
+                }
+                indiceActual++;
+                if(indiceActual > transformada.Muestras.Count / 2.0)
+                {
+                    break;
+                }
             }
         
         }

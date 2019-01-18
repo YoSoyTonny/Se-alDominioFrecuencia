@@ -61,6 +61,7 @@
         </ComboBox>
         <Button x:Name="btnRealizarOperacion" Content="Realizar Operación" HorizontalAlignment="Left" Margin="16,648,0,0" VerticalAlignment="Top" Width="120" Height="24" Click="btnRealizarOperacion_Click"/>
         <Button Content="transformada de fourier" HorizontalAlignment="Left" Margin="149,86,0,0" VerticalAlignment="Top" Width="151"/>
+        <TextBlock x:Name="Frecuencia_fundamental" HorizontalAlignment="Left" Margin="17,721,0,0" TextWrapping="Wrap" Text="0 Hz" VerticalAlignment="Top" Width="40"/>
 
 
 
