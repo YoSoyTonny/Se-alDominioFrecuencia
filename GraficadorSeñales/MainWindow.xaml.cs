@@ -250,20 +250,27 @@ namespace GraficadorSeñales
             int indiceMaximo = 0;
             int indiceActual = 0;
 
-            foreach(Muestra muestra in transformada.Muesreas)
+            foreach(Muestra muestra in señalResultado.Muestras)
             {
-                if muestra.Y > valorMaximo)
+                if (muestra.Y > valorMaximo)
                 {
                     valorMaximo = muestra.Y;
                     indiceMaximo = indiceActual;
                 }
                 indiceActual++;
-                if(indiceActual > transformada.Muestras.Count / 2.0)
+                if(indiceActual > señalResultado.Muestras.Count / 2.0)
                 {
                     break;
                 }
+                double frecuenciaFundamental = (double)indiceMaximo * señal.FrecuenciaMuestreo / (double)señalResultado.Muestras.Count;
+                lblFrecuencia_fundamental.Text = indiceMaximo.ToString() + "Hz";
             }
         
+        }
+
+        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
         }
     }
 
